@@ -1,0 +1,42 @@
+<section class="page-section bg-light" id="team">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Popular Category</h2>
+        </div>
+        <div class="row">
+            {{#each category}}
+            <div class="col-md-3 mt-5">
+                <div class="team-member text-center">
+                    <img class="mx-auto rounded-circle" src="/category-image/{{this._id}}.jpg" height="200px;" alt="..." />
+                    <h4>{{this.Category}}</h4>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section>
+
+
+
+<section>
+    <div class="container mt-5">
+        <h4 class="text-center mb-5"><strong>Popular Products</strong></h4>
+        <div class="row">
+            {{#each products}}
+            <div class="col-md-3 mt-5">
+                <a href="/product-page/{{this._id}}" class="text-decoration-none link-dark">
+                    <div class="card mx-auto" style="width: 18rem; height:auto">
+                        <img src="/product-image/{{this._id}}.jpg" class="card-img-top" alt="..." style="height: 17rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">{{this.Name}}</h5>
+                            <p class="card-text">₹{{this.Price}}</p>
+                </a>
+                <a href="#" class="btn btn-primary">Add to Cart</a>
+            </div>
+        </div>
+
+    </div>
+    {{/each}}
+    </div>
+    </div>
+</section>

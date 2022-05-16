@@ -83,7 +83,7 @@ router.get('/', verifyBlock, async function (req, res, next) {
   console.log(allCoupons);
   productHelper.getAllProducts().then((products) => {
     productHelper.getAllCategory().then((category) => {
-      res.render('user/view-products', { products, category, user, cartCount,allCoupons});
+      res.render('user/view-products', { products, category, user, cartCount,allCoupons,homePage:true});
     })
   })
 });

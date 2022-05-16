@@ -22,8 +22,18 @@
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Image</label>
-                        <img src="/product-image/{{product._id}}.jpg" alt="" style="width: 100px; height:auto" id="imgView">
-                        <input type="file" class="form-control" name="Image" value="{{product._id}}.jpg" onchange="viewImage(event)" >
+                        <img src="/product-image/{{product._id}}/{{product.imageId}}_1.jpg" alt="" style="width: 100px; height:auto" id="imgView">
+                        <input type="file" class="form-control" name="Image"  onchange="viewImage(event)" >
+                    </div>
+                     <div class="mb-3">
+                        <label for="" class="form-label">Image2</label>
+                        <img src="/product-image/{{product._id}}/{{product.imageId}}_2.jpg" alt="" style="width: 100px; height:auto" id="imgView2">
+                        <input type="file" class="form-control" name="Image2" onchange="viewImage2(event)">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Image3</label>
+                        <img src="/product-image/{{product._id}}/{{product.imageId}}_3.jpg" alt="" style="width: 100px; height:auto" id="imgView3">
+                        <input type="file" class="form-control" name="Image3" onchange="viewImage3(event)">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
@@ -36,5 +46,11 @@
 <script>
     function viewImage(event){
         document.getElementById('imgView').src=URL.createObjectURL(event.target.files[0])
+    }
+    function viewImage2(event){
+        document.getElementById('imgView2').src=URL.createObjectURL(event.target.files[0])
+    }
+    function viewImage3(event){
+        document.getElementById('imgView3').src=URL.createObjectURL(event.target.files[0])
     }
 </script>

@@ -1,4 +1,5 @@
 var createError = require('http-errors');
+require('dotenv').config()
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
@@ -8,6 +9,8 @@ var fileUpload = require('express-fileupload')
 var db = require('./config/connection')
 var session = require('express-session')
 const {v4 : uuidv4} = require('uuid')
+
+
 
 db.connect((err)=>{
   if(err){

@@ -3,14 +3,14 @@ const async = require('hbs/lib/async');
 var router = express.Router();
 var productHelper = require('../helpers/product-helpers')
 var userHelpers = require('../helpers/user-helpers')
-
+require('dotenv').config();
 const fs = require('fs');
 const { ObjectId } = require('mongodb');
 const { result } = require('lodash');
 
 const credential = {
-  email: 'ameen123@gmail.com',
-  password: 'asdf'
+  email: process.env.adminEmail,
+  password: process.env.adminPassword
 }
 
 const verifyLogin = (req, res, next) => {
